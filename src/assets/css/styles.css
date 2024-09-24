@@ -23,7 +23,7 @@
   animation: scroll-reveal linear both;
   -webkit-animation: scroll-reveal linear both;
   animation-timeline: view();
-  animation-range: entry 20% cover 50%;
+  animation-range: entry 20% cover 35%;
   scroll-margin-top: 30vh;
 }
 
@@ -473,6 +473,18 @@ h2 {
   padding: 0;
 }
 
+.projectPic {
+  width: 8em;
+  height: 8em;
+  margin: 2em auto;
+  border-radius: 50%;
+  object-fit: cover;
+  outline: 1px groove white;
+  outline-offset: 5px;
+  /* outline-offset: 1px; */
+  box-shadow:0 0 8px 5px gray, 0 0 35px 25px white, 0 0 50px 10px #2e2e2e;
+}
+
 .card {
   width: 15em;
   border: solid 2px var(--colorGreen);
@@ -539,22 +551,11 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 2em;
+  align-content: center;
 }
 
 .projectsFigure img {
   width: 100%;
-}
-
-.projectPic {
-  width: 8em;
-  height: 8em;
-  margin: 2em auto;
-  border-radius: 50%;
-  object-fit: cover;
-  outline: 1px groove white;
-  outline-offset: 5px;
-  /* outline-offset: 1px; */
-  box-shadow:0 0 8px 5px gray, 0 0 35px 25px white, 0 0 50px 10px #2e2e2e;
 }
 
 /* ==================================================================== */
@@ -625,12 +626,60 @@ details a:visited {
 }
 
 /* ==================================================================== */
+/* CONTACT */
+/* ==================================================================== */
+
+.contact{
+  background-color: var(--blue1);
+  padding-top: 5em;
+  padding-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  border: solid 1px var(--colorGreen);
+  border-radius: 10px;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  margin-top: 3em;
+}
+
+.buttonsContact{
+  display: flex;
+  flex-direction: row;
+  gap: 4em;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact .formGroup{
+  display: grid;
+  color: var(--Gray);
+}
+
+.contact input, .contact textarea{
+  padding: 1em;
+  border-radius: 10px;
+  font-family: var(--mont);
+  font-size: 1em;
+}
+
+.formAlert{
+  display: none;
+}
+
+/* ==================================================================== */
 /* FOOTER */
 /* ==================================================================== */
 
 footer {
   height: 15vh;
-  background-color: var(--blue1);
   display: flex;
   align-items: center;
   justify-content: center;

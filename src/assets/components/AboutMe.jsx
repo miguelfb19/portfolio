@@ -1,4 +1,5 @@
 import React from "react";
+import presentationLetter from "../imagenes/certificados/cartaPresentacion.pdf";
 
 function AboutMe() {
   const info = {
@@ -13,8 +14,9 @@ function AboutMe() {
         <p>{info.paragraph}</p>
         <a
           className="btn2"
-          href="./assets/imagenes/certificados/cartaPresentacion.pdf"
+          href={presentationLetter}
           target="_blank"
+          rel="noreferrer"
         >
           Presentación
         </a>

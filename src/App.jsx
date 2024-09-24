@@ -6,6 +6,7 @@ import AboutMe from "./assets/components/AboutMe";
 import Projects from "./assets/components/Projects";
 import Education from "./assets/components/Education";
 import Icons from "./assets/components/Icons";
+import Contact from "./assets/components/Contact";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <AboutMe></AboutMe>
       <Projects></Projects>
       <Education></Education>
+      <Contact>x</Contact>
       <footer>
         <span className="copyright">
           &copy; Todos los derechos reservados
