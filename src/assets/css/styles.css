@@ -1,0 +1,946 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nova+Square&display=swap");
+
+:root {
+  --Gray: #e0e1dd;
+  --blue1: #1b263b;
+  --blue3: #415a77;
+  --blue4: #778da9;
+  --colorGreen: #23c483;
+  --textColor: #e0e1dd;
+  --mont: "Montserrat", sans-serif;
+  --jersey: "Jersey 25", sans-serif;
+}
+
+/* ==================================================================== */
+/* CONTENIDO DEL GENERAL */
+/* ==================================================================== */
+
+.skills, .aboutMe, .portfolio, .educationExp{
+  animation: scroll-reveal linear both;
+  -webkit-animation: scroll-reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 50%;
+  scroll-margin-top: 30vh;
+}
+
+@keyframes scroll-reveal {
+  from{
+    opacity: 0;
+    translate: 0 20vh;
+  }
+  to{
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+body {
+  font-family: var(--mont);
+  margin: 0 auto;
+  padding: 0;
+  background-color: #1a1e26;
+}
+
+.title {
+  font-family: var(--mont);
+  font-size: 3.5em;
+  text-align: center;
+  letter-spacing: 5%;
+  margin-bottom: 2%;
+  text-shadow: 4px 4px 10px var(--colorGreen);
+  color: var(--textColor);
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+p,
+h1,
+h2 {
+  text-align: justify;
+  color: var(--textColor);
+}
+
+.btn {
+  padding: 1em;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: var(--blue1);
+  background-color: var(--Gray);
+  border: solid 1px var(--Gray);
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  width: 25%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mont);
+  font-weight: bold;
+  font-size: 0.6em;
+}
+
+.btn2 {
+  padding: 1em;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: var(--Gray);
+  border: solid 1px var(--Gray);
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  width: 25%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mont);
+  font-weight: bold;
+  font-size: 0.6em;
+}
+
+.btn:hover,
+.btn2:hover {
+  background-color: var(--colorGreen);
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.btnTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 2em;
+  height: 2em;
+  font-size: 2em;
+  fill: var(--Gray);
+  background-color: var(--Gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--blue1);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.btnTop:hover{
+  opacity: 1;
+}
+
+/* ==================================================================== */
+/* MENÚ */
+/* ==================================================================== */
+
+.mainMenu {
+  background-color: var(--blue1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+}
+
+.menuRight {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+}
+
+.menuLeft {
+  display: flex;
+}
+
+.menuLeft img {
+  margin-left: 2em;
+}
+
+.mainMenu a {
+  font-size: 1em;
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+.mainMenu a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--textColor);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease;
+}
+
+.mainMenu a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ==================================================================== */
+/* HEADER */
+/* ==================================================================== */
+
+.header {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.initialInfo,
+.ppal-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.initialInfo .title {
+  width: 70%;
+}
+
+/* ==================================================================== */
+/* HEADER PIC */
+/* ==================================================================== */
+
+.ppalPicture {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transition: all 0.3s;
+  width: 25vw;
+  height: 26vw;
+}
+
+.ppalPicture:hover {
+  background-color: var(--colorGreen);
+  box-shadow: 0px 8px 15px var(--colorGreen);
+  color: #fff;
+  transform: translateY(-7px);
+  animation: levitate 1.5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  animation-delay: 0.5s;
+}
+
+.letter {
+  color: var(--colorGreen);
+  margin: 0 auto;
+  transition: all 0.5s ease;
+}
+
+.letter:hover {
+  filter: brightness(2);
+}
+
+/* ==================================================================== */
+/* HEADER INFO */
+/* ==================================================================== */
+
+#index h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
+  color: var(--textColor);
+}
+
+#email {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.copy,
+.send {
+  display: flex;
+  justify-content: center;
+}
+
+.mailButtonIcon:hover {
+  filter: brightness(2);
+}
+
+.buttonsMailContent {
+  display: flex;
+}
+
+.buttonsMailContent a {
+  align-items: center;
+  align-content: center;
+}
+
+#redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50%;
+  margin: 0px auto;
+}
+
+.git {
+  height: 50%;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+}
+
+.git:hover {
+  filter: drop-shadow(0px 8px 15px var(--colorGreen));
+  transform: translateY(-7px);
+  animation: levitate 1.5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  animation-delay: 0.5s;
+}
+
+.linkedin {
+  height: 50%;
+  transition: all 0.5s ease;
+}
+
+.linkedin:hover {
+  filter: drop-shadow(0px 8px 15px var(--colorGreen));
+  transform: translateY(-7px);
+  animation: levitate 1.5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(-7px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(-7px);
+  }
+}
+
+.buttons {
+  margin-top: 1em;
+  width: 60%;
+  height: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons button {
+  width: 30%;
+}
+
+/* ==================================================================== */
+/* SKILLS */
+/* ==================================================================== */
+
+.skills {
+  background-color: var(--blue1);
+  padding: 2em 0 2em 0;
+  height: 100vh;
+  align-content: center;
+}
+
+.hard-skills-animation-container{
+  margin-bottom: 3em !important;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  width: 80vw;
+  overflow: scroll;
+  margin: 6em auto;
+  height: auto;
+}
+
+.hardSkills {
+  color: var(--textColor);
+  display: flex;
+  justify-content: start;
+  list-style-type: none;
+  padding: 1em;
+  animation: scrollCarrousel 10s linear infinite alternate;
+  -webkit-animation: scrollCarrousel 10s linear infinite alternate;
+  width: 160%;
+}
+
+@keyframes scrollCarrousel {
+  from{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+  to{
+    transform: translateX(-40%);
+    -webkit-transform: translateX(-40%);
+  }
+}
+
+.hardSkills li {
+  width: 10em;
+  transition: all ease 0.5s;
+}
+
+.hardSkills li:hover{
+  transform: translateY(-7px);
+  animation: levitate 1.5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  animation-delay: 0.5s;
+  filter: drop-shadow(0px 15px 20px rgba(46, 229, 157, 0.4));
+  transform: translateY(-7px);
+}
+
+figure {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+figure img {
+  width: 3.5em;
+  height: 3.5em;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.softSkills {
+  color: var(--textColor);
+  display: flex;
+  gap: 4em;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 3em;
+  width: 100%;
+}
+
+.softSkills li {
+  text-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  font-weight: bold;
+}
+
+/* ==================================================================== */
+/* ABOUT ME */
+/* ==================================================================== */
+
+.aboutMe {
+  height: 70vh;
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em 0 4em 0;
+}
+
+.aboutMe .btn2{
+  margin: 0 auto;
+  margin-top: 2em;
+  width: 15%;
+}
+
+/* ==================================================================== */
+/* PORTFOLIO */
+/* ==================================================================== */
+
+.portfolio {
+  margin: 0 auto;
+  padding: 2em 0 5em 0;
+  background-color: var(--blue1);
+}
+
+.projects {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4em;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.card {
+  width: 15em;
+  border: solid 2px var(--colorGreen);
+  border-radius: 25px;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.projectsLink{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5em;
+  padding-right: 1.5em;
+  margin-top: 1em;
+}
+
+.projectsLink a{
+  font-size: 1.5em;
+  color: var(--Gray);
+  transition: all ease 0.7s;
+}
+
+.projectsLink a:hover{
+  color: var(--colorGreen);
+}
+
+.projects p {
+  width: 85%;
+}
+
+.projects img {
+  width: 100%;
+}
+
+.projects h4,
+.projects p {
+  margin: 0 auto;
+  color: var(--textColor);
+  text-align: center;
+}
+
+.projects hr {
+  margin: 1em;
+}
+
+.projects li p:nth-of-type(2) {
+  color: var(--colorGreen);
+}
+
+.projects h4 {
+  font-size: 120%;
+}
+
+.projects figure {
+  width: 2em;
+  color: #fff;
+}
+
+.projectsFigure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projectsFigure figure {
+  margin: 1em;
+}
+
+/* ==================================================================== */
+/* FORMACIÓN */
+/* ==================================================================== */
+
+.educationExp {
+  height: 85vh;
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 0;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.educationExp .title {
+  width: 100vw;
+  margin: 0;
+  height: 20%;
+  align-content: center;
+}
+
+.edu,
+.exp {
+  width: 35vw;
+}
+
+.edu {
+  color: var(--Gray);
+  line-height: 2em;
+  max-height: 40%;
+  overflow-y: auto;
+}
+
+.exp{
+  max-height: 40%;
+  overflow-y: auto;
+}
+
+.exp h2,
+.exp p {
+  margin: 0;
+  text-align: right;
+}
+
+.exp p {
+  margin-bottom: 1.5em;
+}
+
+details p {
+  margin: 0;
+}
+
+details a {
+  color: var(--colorGreen);
+}
+
+details a:hover {
+  filter: brightness(2);
+}
+
+details a:visited {
+  color: var(--blue4);
+}
+
+/* ==================================================================== */
+/* FOOTER */
+/* ==================================================================== */
+
+footer {
+  height: 15vh;
+  background-color: var(--blue1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Gray);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* ==================================================================== */
+/* MEDIA QUERYS */
+/* ==================================================================== */
+
+/* ==================================================================== */
+/* PC PEQUEÑO - IPAD GRANDE */
+/* ==================================================================== */
+
+@media (max-width: 1024px) {
+
+  @keyframes scrollCarrousel {
+    from{
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+    }
+    to{
+      transform: translateX(-80%);
+      -webkit-transform: translateX(-80%);
+    }
+  }
+
+  .btn2, .btn{
+    letter-spacing: 1px;
+  }
+
+  .mainMenu{
+    grid-template-columns: 1fr 2fr;
+  }
+  .mainMenu a{
+    font-size: 1.5em;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+  }
+
+  .ppalPicture{
+    width: 38vw;
+    height: 30vh;
+  }
+
+  .initialInfo{
+    margin: 0 auto;
+  }
+
+  .initialInfo .title{
+    width: 90%;
+  }
+
+  .textEmail{
+    font-size: 1.5em;
+  }
+
+  .mailButtonIcon {
+    padding: 1em !important;
+  }
+
+  .git, .linkedin{
+    height: 3em;
+  }
+
+  .btn, .btn2 {
+    font-size: 0.8em;
+    padding: 1.8em;
+  }
+
+  .skills{
+    height: 80vh;
+  }
+
+  .softSkills{
+    width: 130%;
+  }
+
+  .aboutMe p{
+    font-size: 1.5em;
+  }
+
+  .card p{
+    font-size: 1.15em;
+  }
+
+  .educationExp h2{
+    font-size: 1.4em;
+  }
+
+  .educationExp .title{
+    margin-bottom: 1em;
+  }
+
+  .educationExp{
+    width: 100vw;
+    height: 90vh;
+    gap: 1em;
+  }
+
+  .edu, .exp {
+    width: 45vw;
+  }
+
+  .btnTop{
+    font-size: 2.5em;
+    width: 2em;
+    height: 2em;
+  }
+}
+
+/* ==================================================================== */
+/* IPAD MEDIANO */
+/* ==================================================================== */
+
+@media (max-width: 850px) {
+
+  @keyframes scrollCarrousel {
+    from{
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+    }
+    to{
+      transform: translateX(-130%);
+      -webkit-transform: translateX(-130%);
+    }
+  }
+  
+  .mainMenu{
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+  }
+  .mainMenu a{
+    font-size: 1.2em;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 6em;
+  }
+
+  .ppalPicture{
+    width: 44vw;
+    height: 34vh;
+  }
+
+  .aboutMe{
+    width: 85%;
+  }
+
+  figcaption{
+    font-size: 1.5em;
+  }
+
+  .softSkills {
+    font-size: 1.3em;
+    width: 190%;
+  }
+
+  .card{
+    width: 18em;
+  }
+
+  .educationExp {
+    font-size: 1.2em;
+  }
+}
+
+/* ==================================================================== */
+/* PHONE */
+/* ==================================================================== */
+
+@media (max-width: 500px) {
+
+  @keyframes scrollCarrousel {
+    from{
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+    }
+    to{
+      transform: translateX(-160%);
+      -webkit-transform: translateX(-160%);
+    }
+  }
+
+  .title{
+    font-size: 2em;
+  }
+  .mainMenu{
+    grid-template-columns: 1fr 5fr;
+    width: 100%;
+    height: 20vw;
+  }
+  .mainMenu a{
+    font-size: 0.75em;
+  }
+
+  .mainMenu img{
+    height: 2em;
+    margin: 0 0 0 1em;
+  }
+
+  .menuRight{
+    gap: 1em;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    height: 70vh;
+    font-size: 0.6em;
+  }
+
+  .ppalPicture{
+    width: 40vw;
+    height: 20vh;
+  }
+
+  .header .title {
+    font-size: 3em;
+  }
+
+  .aboutMe{
+    width: 85%;
+  }
+
+  .aboutMe .btn2{
+    padding: 1em;
+    width: 25%;
+    font-size: 0.5em;
+  }
+
+  .skills{
+    padding: 1em 0;
+  }
+
+  .skills .title{
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  .hardSkills{
+    gap: 1em;
+  }
+
+  .hardSkills li{
+    width: 5em;
+    height: 6em;
+  }
+
+  figure img{
+    height: 2.5em;
+  }
+
+  figcaption{
+    font-size: 1em;
+  }
+
+  .softSkills {
+    font-size: 0.8em;
+    padding: 1.5em;
+    width: 280%;
+  }
+
+  .aboutMe p{
+    font-size: 1em;
+    margin-top: 3em;
+  }
+
+  .portfolio{
+    padding: 1em 0 3em 0;
+  }
+
+  .projects{
+    gap: 1em;
+  }
+
+  .portfolio .title{
+    margin-bottom: 1em;
+  }
+
+  .card{
+    width: 15em;
+    font-size: 0.7em;
+  }
+
+  .educationExp {
+    font-size: 0.7em;
+    align-content: flex-start;
+    height: 60vh;
+  }
+
+  footer{
+    font-size: 0.8em;
+  }
+
+  .btnTop{
+    font-size: 1.5em;
+    width: 2em;
+    height: 2em;
+  }
+}
+
+/* ==================================================================== */
+/* SMALL PHONE */
+/* ==================================================================== */
+
+@media (max-width: 380px) {
+
+  .hardSkills{
+    width: 130%;
+  }
+}
