@@ -16,7 +16,10 @@
 /* CONTENIDO DEL GENERAL */
 /* ==================================================================== */
 
-.skills, .aboutMe, .portfolio, .educationExp{
+.skills,
+.aboutMe,
+.portfolio,
+.educationExp {
   animation: scroll-reveal linear both;
   -webkit-animation: scroll-reveal linear both;
   animation-timeline: view();
@@ -25,11 +28,11 @@
 }
 
 @keyframes scroll-reveal {
-  from{
+  from {
     opacity: 0;
     translate: 0 20vh;
   }
-  to{
+  to {
     opacity: 1;
     translate: 0 0;
   }
@@ -141,7 +144,7 @@ h2 {
   z-index: 1;
 }
 
-.btnTop:hover{
+.btnTop:hover {
   opacity: 1;
 }
 
@@ -253,7 +256,7 @@ h2 {
 /* HEADER INFO */
 /* ==================================================================== */
 
-#index h3 {
+.header h3 {
   font-size: 1.5em;
   font-weight: 400;
   text-align: center;
@@ -353,7 +356,7 @@ h2 {
   align-content: center;
 }
 
-.hard-skills-animation-container{
+.hard-skills-animation-container {
   margin-bottom: 3em !important;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   width: 80vw;
@@ -374,11 +377,11 @@ h2 {
 }
 
 @keyframes scrollCarrousel {
-  from{
+  from {
     transform: translateX(0);
     -webkit-transform: translateX(0);
   }
-  to{
+  to {
     transform: translateX(-40%);
     -webkit-transform: translateX(-40%);
   }
@@ -389,7 +392,7 @@ h2 {
   transition: all ease 0.5s;
 }
 
-.hardSkills li:hover{
+.hardSkills li:hover {
   transform: translateY(-7px);
   animation: levitate 1.5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
   animation-delay: 0.5s;
@@ -397,19 +400,19 @@ h2 {
   transform: translateY(-7px);
 }
 
-figure {
+.hardSkills figure {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
 }
 
-figure img {
+.hardSkills figure img {
   width: 3.5em;
   height: 3.5em;
 }
 
-figcaption {
+.hardSkills figcaption {
   text-align: center;
 }
 
@@ -444,7 +447,7 @@ figcaption {
   padding: 2em 0 4em 0;
 }
 
-.aboutMe .btn2{
+.aboutMe .btn2 {
   margin: 0 auto;
   margin-top: 2em;
   width: 15%;
@@ -479,7 +482,7 @@ figcaption {
   flex-direction: column;
 }
 
-.projectsLink{
+.projectsLink {
   display: flex;
   justify-content: flex-end;
   gap: 1.5em;
@@ -487,22 +490,18 @@ figcaption {
   margin-top: 1em;
 }
 
-.projectsLink a{
+.projectsLink a {
   font-size: 1.5em;
   color: var(--Gray);
   transition: all ease 0.7s;
 }
 
-.projectsLink a:hover{
+.projectsLink a:hover {
   color: var(--colorGreen);
 }
 
 .projects p {
   width: 85%;
-}
-
-.projects img {
-  width: 100%;
 }
 
 .projects h4,
@@ -525,8 +524,9 @@ figcaption {
 }
 
 .projects figure {
-  width: 2em;
+  max-width: 2em;
   color: #fff;
+  margin: 1em;
 }
 
 .projectsFigure {
@@ -536,7 +536,25 @@ figcaption {
 }
 
 .projectsFigure figure {
-  margin: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.projectsFigure img {
+  width: 100%;
+}
+
+.projectPic {
+  width: 8em;
+  height: 8em;
+  margin: 2em auto;
+  border-radius: 50%;
+  object-fit: cover;
+  outline: 1px groove white;
+  outline-offset: 5px;
+  /* outline-offset: 1px; */
+  box-shadow:0 0 8px 5px gray, 0 0 35px 25px white, 0 0 50px 10px #2e2e2e;
 }
 
 /* ==================================================================== */
@@ -575,7 +593,7 @@ figcaption {
   overflow-y: auto;
 }
 
-.exp{
+.exp {
   max-height: 40%;
   overflow-y: auto;
 }
@@ -624,6 +642,10 @@ footer {
   font-size: 0.9em;
 }
 
+.iconFooter {
+  height: 1.5em;
+}
+
 /* ==================================================================== */
 /* MEDIA QUERYS */
 /* ==================================================================== */
@@ -633,30 +655,30 @@ footer {
 /* ==================================================================== */
 
 @media (max-width: 1024px) {
-
   @keyframes scrollCarrousel {
-    from{
+    from {
       transform: translateX(0);
       -webkit-transform: translateX(0);
     }
-    to{
+    to {
       transform: translateX(-80%);
       -webkit-transform: translateX(-80%);
     }
   }
 
-  .btn2, .btn{
+  .btn2,
+  .btn {
     letter-spacing: 1px;
   }
 
-  .mainMenu{
+  .mainMenu {
     grid-template-columns: 1fr 2fr;
   }
-  .mainMenu a{
+  .mainMenu a {
     font-size: 1.5em;
   }
 
-  .header{
+  .header {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -664,20 +686,20 @@ footer {
     gap: 10em;
   }
 
-  .ppalPicture{
+  .ppalPicture {
     width: 38vw;
     height: 30vh;
   }
 
-  .initialInfo{
+  .initialInfo {
     margin: 0 auto;
   }
 
-  .initialInfo .title{
+  .initialInfo .title {
     width: 90%;
   }
 
-  .textEmail{
+  .textEmail {
     font-size: 1.5em;
   }
 
@@ -685,50 +707,53 @@ footer {
     padding: 1em !important;
   }
 
-  .git, .linkedin{
+  .git,
+  .linkedin {
     height: 3em;
   }
 
-  .btn, .btn2 {
+  .btn,
+  .btn2 {
     font-size: 0.8em;
     padding: 1.8em;
   }
 
-  .skills{
+  .skills {
     height: 80vh;
   }
 
-  .softSkills{
+  .softSkills {
     width: 130%;
   }
 
-  .aboutMe p{
+  .aboutMe p {
     font-size: 1.5em;
   }
 
-  .card p{
+  .card p {
     font-size: 1.15em;
   }
 
-  .educationExp h2{
+  .educationExp h2 {
     font-size: 1.4em;
   }
 
-  .educationExp .title{
+  .educationExp .title {
     margin-bottom: 1em;
   }
 
-  .educationExp{
+  .educationExp {
     width: 100vw;
     height: 90vh;
     gap: 1em;
   }
 
-  .edu, .exp {
+  .edu,
+  .exp {
     width: 45vw;
   }
 
-  .btnTop{
+  .btnTop {
     font-size: 2.5em;
     width: 2em;
     height: 2em;
@@ -740,27 +765,26 @@ footer {
 /* ==================================================================== */
 
 @media (max-width: 850px) {
-
   @keyframes scrollCarrousel {
-    from{
+    from {
       transform: translateX(0);
       -webkit-transform: translateX(0);
     }
-    to{
+    to {
       transform: translateX(-130%);
       -webkit-transform: translateX(-130%);
     }
   }
-  
-  .mainMenu{
+
+  .mainMenu {
     grid-template-columns: 1fr 2fr;
     width: 100%;
   }
-  .mainMenu a{
+  .mainMenu a {
     font-size: 1.2em;
   }
 
-  .header{
+  .header {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -768,16 +792,16 @@ footer {
     gap: 6em;
   }
 
-  .ppalPicture{
+  .ppalPicture {
     width: 44vw;
     height: 34vh;
   }
 
-  .aboutMe{
+  .aboutMe {
     width: 85%;
   }
 
-  figcaption{
+  figcaption {
     font-size: 1.5em;
   }
 
@@ -786,7 +810,7 @@ footer {
     width: 190%;
   }
 
-  .card{
+  .card {
     width: 18em;
   }
 
@@ -800,40 +824,39 @@ footer {
 /* ==================================================================== */
 
 @media (max-width: 500px) {
-
   @keyframes scrollCarrousel {
-    from{
+    from {
       transform: translateX(0);
       -webkit-transform: translateX(0);
     }
-    to{
+    to {
       transform: translateX(-160%);
       -webkit-transform: translateX(-160%);
     }
   }
 
-  .title{
+  .title {
     font-size: 2em;
   }
-  .mainMenu{
+  .mainMenu {
     grid-template-columns: 1fr 5fr;
     width: 100%;
     height: 20vw;
   }
-  .mainMenu a{
+  .mainMenu a {
     font-size: 0.75em;
   }
 
-  .mainMenu img{
+  .mainMenu img {
     height: 2em;
     margin: 0 0 0 1em;
   }
 
-  .menuRight{
+  .menuRight {
     gap: 1em;
   }
 
-  .header{
+  .header {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -843,7 +866,7 @@ footer {
     font-size: 0.6em;
   }
 
-  .ppalPicture{
+  .ppalPicture {
     width: 40vw;
     height: 20vh;
   }
@@ -852,40 +875,40 @@ footer {
     font-size: 3em;
   }
 
-  .aboutMe{
+  .aboutMe {
     width: 85%;
   }
 
-  .aboutMe .btn2{
+  .aboutMe .btn2 {
     padding: 1em;
     width: 25%;
     font-size: 0.5em;
   }
 
-  .skills{
+  .skills {
     padding: 1em 0;
   }
 
-  .skills .title{
+  .skills .title {
     width: 50%;
     margin: 0 auto;
     margin-bottom: 1em;
   }
 
-  .hardSkills{
+  .hardSkills {
     gap: 1em;
   }
 
-  .hardSkills li{
+  .hardSkills li {
     width: 5em;
     height: 6em;
   }
 
-  figure img{
+  figure img {
     height: 2.5em;
   }
 
-  figcaption{
+  figcaption {
     font-size: 1em;
   }
 
@@ -895,24 +918,24 @@ footer {
     width: 280%;
   }
 
-  .aboutMe p{
+  .aboutMe p {
     font-size: 1em;
     margin-top: 3em;
   }
 
-  .portfolio{
+  .portfolio {
     padding: 1em 0 3em 0;
   }
 
-  .projects{
+  .projects {
     gap: 1em;
   }
 
-  .portfolio .title{
+  .portfolio .title {
     margin-bottom: 1em;
   }
 
-  .card{
+  .card {
     width: 15em;
     font-size: 0.7em;
   }
@@ -923,11 +946,11 @@ footer {
     height: 60vh;
   }
 
-  footer{
+  footer {
     font-size: 0.8em;
   }
 
-  .btnTop{
+  .btnTop {
     font-size: 1.5em;
     width: 2em;
     height: 2em;
@@ -939,8 +962,7 @@ footer {
 /* ==================================================================== */
 
 @media (max-width: 380px) {
-
-  .hardSkills{
+  .hardSkills {
     width: 130%;
   }
 }

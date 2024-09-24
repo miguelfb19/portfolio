@@ -20,10 +20,7 @@ import postman from '../imagenes/logos/postman.svg'
 import git from '../imagenes/logos/git.svg'
 
 
-function Icons({iconName}) {
-
-  console.log(iconName);
-  
+function Icons({iconName, className}) { 
 
     const icons = {
         code: code,
@@ -49,12 +46,9 @@ function Icons({iconName}) {
 
     const iconSrc = icons[iconName]
 
-    console.log(iconSrc);
-    
-
   return (
     <>
-      { iconSrc && <img src={iconSrc} alt={iconName} />}
+      { iconSrc && <img src={iconSrc} alt={iconName} className={className}/>}
     </>
   );
 }

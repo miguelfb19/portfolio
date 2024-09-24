@@ -4,6 +4,7 @@ import picture from "../imagenes/fotos/portada.jpg";
 import copy2 from "../imagenes/logos/copy2.svg";
 import send from "../imagenes/logos/send.svg";
 import check from "../imagenes/logos/check.svg";
+import '../css/styles.css'
 
 function Header() {
   

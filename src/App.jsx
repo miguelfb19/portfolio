@@ -5,6 +5,7 @@ import Skills from "./assets/components/Skills";
 import AboutMe from "./assets/components/AboutMe";
 import Projects from "./assets/components/Projects";
 import Education from "./assets/components/Education";
+import Icons from "./assets/components/Icons";
 
 function App() {
   return (
@@ -16,10 +17,10 @@ function App() {
       <Projects></Projects>
       <Education></Education>
       <footer>
-        <span class="copyright">
+        <span className="copyright">
           &copy; Todos los derechos reservados
           <br />
-          <b>Desarrollado por</b> Miguel Ángel Fernández Barco
+          <b>Desarrollado con <Icons iconName='react' className='iconFooter'></Icons> por</b> Miguel Ángel Fernández Barco
         </span>
       </footer>
     </>
