@@ -631,12 +631,15 @@ details a:visited {
 
 .contact{
   background-color: var(--blue1);
-  padding-top: 5em;
-  padding-bottom: 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+}
+
+.contact .title{
+  margin-top: 0;
 }
 
 .form {
@@ -645,7 +648,7 @@ details a:visited {
   padding: 3em;
   display: flex;
   flex-direction: column;
-  row-gap: 2em;
+  row-gap: 1em;
   margin-top: 3em;
 }
 
@@ -664,14 +667,22 @@ details a:visited {
 }
 
 .contact input, .contact textarea{
-  padding: 1em;
+  padding: 0.7em;
   border-radius: 10px;
   font-family: var(--mont);
   font-size: 1em;
 }
 
 .formAlert{
+  text-align: center;
+  background-color: #23c483;
+  color: var(--Gray);
+  padding: 1em;
+  width: 70%;
+  margin: auto;
+  font-weight: bold;
   display: none;
+  opacity: 0;
 }
 
 /* ==================================================================== */

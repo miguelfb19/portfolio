@@ -3,11 +3,12 @@ import Icons from "./Icons";
 
 function Menu() {
 
-  const scroll = (target, btn)=>{
-    btn.addEventListener('click', ()=>{
-      target.scrollIntoView({block: 'start', behavior:'smooth', inline: 'nearest'})
-    })
-  }
+  const scrollTo = (sectionClass) => {
+    const section = document.querySelector(sectionClass);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" }); // Desplazamiento suave
+    }
+  };
   
   return (
     <>

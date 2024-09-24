@@ -24,7 +24,7 @@ function Contact() {
             <textarea
               id="inputMessage"
               cols="50"
-              rows="5"
+              rows="4"
               placeholder="Escribe aquí tu mensaje..."
             ></textarea>
           </div>
@@ -32,7 +32,7 @@ function Contact() {
             <button type="submit" className="btn">Enviar</button>
             <button type="reset" className="btn2">Limpiar</button>
           </div>
-          <span className="formAlert"></span>
+          <span className="formAlert">Formulairo enviado con exito</span>
         </form>
       </section>
     </>
