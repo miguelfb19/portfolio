@@ -19,12 +19,13 @@
 .skills,
 .aboutMe,
 .portfolio,
-.educationExp {
+.educationExp,
+.contact {
   animation: scroll-reveal linear both;
   -webkit-animation: scroll-reveal linear both;
   animation-timeline: view();
   animation-range: entry 20% cover 35%;
-  scroll-margin-top: 30vh;
+  scroll-margin-top: 50vh;
 }
 
 @keyframes scroll-reveal {
@@ -142,10 +143,18 @@ h2 {
   color: var(--blue1);
   opacity: 0.5;
   z-index: 1;
+  transition: all 0.3s;
+  background: linear-gradient(225deg, #f0f1ec, #cacbc7);
+  box-shadow: -10px 10px 32px #5a5a58, 10px -10px 32px #898989;
 }
 
 .btnTop:hover {
   opacity: 1;
+}
+
+.btnTop:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #343434, inset -4px -4px 12px #ffffff;
 }
 
 /* ==================================================================== */
@@ -467,7 +476,7 @@ h2 {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 4em;
+  gap: 1em;
   justify-content: center;
   margin: 0 auto;
   padding: 0;
@@ -482,7 +491,7 @@ h2 {
   outline: 1px groove white;
   outline-offset: 5px;
   /* outline-offset: 1px; */
-  box-shadow:0 0 8px 5px gray, 0 0 35px 25px white, 0 0 50px 10px #2e2e2e;
+  box-shadow: 0 0 8px 5px gray, 0 0 35px 25px white, 0 0 50px 10px #2e2e2e;
 }
 
 .card {
@@ -563,7 +572,7 @@ h2 {
 /* ==================================================================== */
 
 .educationExp {
-  height: 85vh;
+  min-height: 100vh;
   width: 80vw;
   display: flex;
   flex-wrap: wrap;
@@ -629,7 +638,7 @@ details a:visited {
 /* CONTACT */
 /* ==================================================================== */
 
-.contact{
+.contact {
   background-color: var(--blue1);
   display: flex;
   flex-direction: column;
@@ -638,7 +647,7 @@ details a:visited {
   min-height: 100vh;
 }
 
-.contact .title{
+.contact .title {
   margin-top: 0;
 }
 
@@ -652,7 +661,7 @@ details a:visited {
   margin-top: 3em;
 }
 
-.buttonsContact{
+.buttonsContact {
   display: flex;
   flex-direction: row;
   gap: 4em;
@@ -661,28 +670,43 @@ details a:visited {
   width: 100%;
 }
 
-.contact .formGroup{
+.contact .formGroup {
   display: grid;
   color: var(--Gray);
 }
 
-.contact input, .contact textarea{
+.contact input,
+.contact textarea {
   padding: 0.7em;
   border-radius: 10px;
   font-family: var(--mont);
   font-size: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+  scale: 0.98;
 }
 
-.formAlert{
-  text-align: center;
+.contact input:focus,
+.contact textarea:focus {
+  scale: 1;
+  background-color: white;
+  box-shadow: 1px 1px 15px #969696, -1px -1px 15px #ffffff;
+  outline: 2px solid var(--colorGreen);
+  outline-offset: -5px;
+}
+
+.formAlert {
+  justify-content: center;
+  filter: drop-shadow(5px 5px 5px white);
   background-color: #23c483;
-  color: var(--Gray);
+  color: var(--blue1);
   padding: 1em;
   width: 70%;
   margin: auto;
-  font-weight: bold;
+  margin-top: 1em;
   display: none;
-  opacity: 0;
+  border-radius: 5px;
 }
 
 /* ==================================================================== */

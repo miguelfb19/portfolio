@@ -7,10 +7,12 @@ import Projects from "./assets/components/Projects";
 import Education from "./assets/components/Education";
 import Icons from "./assets/components/Icons";
 import Contact from "./assets/components/Contact";
+import ButtonToTop from "./assets/components/ButtonToTop";
 
 function App() {
   return (
     <>
+      <ButtonToTop></ButtonToTop>
       <Menu></Menu>
       <Header></Header>
       <Skills></Skills>
@@ -22,7 +24,11 @@ function App() {
         <span className="copyright">
           &copy; Todos los derechos reservados
           <br />
-          <b>Desarrollado con <Icons iconName='react' className='iconFooter'></Icons> por</b> Miguel Ángel Fernández Barco
+          <b>
+            Desarrollado con{" "}
+            <Icons iconName="react" className="iconFooter"></Icons> por
+          </b>{" "}
+          Miguel Ángel Fernández Barco
         </span>
       </footer>
     </>

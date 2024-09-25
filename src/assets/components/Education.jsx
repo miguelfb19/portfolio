@@ -5,7 +5,7 @@ function Education() {
   
   return (
     <>
-      <section className="educationExp">
+      <section className="educationExp" id="education">
         <h1 className="title">Formación y experiencia</h1>
         <section className="edu">
           <section className="details">

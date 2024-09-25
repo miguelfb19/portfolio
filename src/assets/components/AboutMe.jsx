@@ -9,7 +9,7 @@ function AboutMe() {
   };
   return (
     <>
-      <section className="aboutMe">
+      <section className="aboutMe" id="aboutMe">
         <h1 className="title">{info.title}</h1>
         <p>{info.paragraph}</p>
         <a

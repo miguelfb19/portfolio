@@ -1,37 +1,64 @@
 import React from "react";
 import Icons from "./Icons";
+import { Link } from "react-scroll";
 
 function Menu() {
+  //Creamos esta variable para corregir el scroll que se modifica debido a la animacion del DOM
+  let vh = window.innerHeight;
+  let srollCorrection = -0.2 * vh;
 
-  const scrollTo = (sectionClass) => {
-    const section = document.querySelector(sectionClass);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" }); // Desplazamiento suave
-    }
-  };
-  
   return (
     <>
       <nav className="mainMenu">
         <section className="menuLeft">
-          <Icons iconName='code'></Icons>
+          <Icons iconName="code"></Icons>
         </section>
         <section className="menuRight">
-          <a className="menuSkills" href="#skills">
+          <Link
+            style={{ cursor: "pointer" }}
+            to="skills"
+            smooth={true}
+            offset={srollCorrection}
+            duration={800}
+          >
             Habilidades
-          </a>
-          <a className="menuAboutMe" href="#aboutMe">
+          </Link>
+          <Link
+            style={{ cursor: "pointer" }}
+            to="aboutMe"
+            smooth={true}
+            offset={srollCorrection}
+            duration={800}
+          >
             Sobre mí
-          </a>
-          <a className="menuProjects" href="#projects">
+          </Link>
+          <Link
+            style={{ cursor: "pointer" }}
+            to="portfolio"
+            smooth={true}
+            offset={srollCorrection}
+            duration={800}
+          >
             Proyectos
-          </a>
-          <a className="menuEducation" href="#education">
+          </Link>
+          <Link
+            style={{ cursor: "pointer" }}
+            to="education"
+            smooth={true}
+            offset={srollCorrection}
+            duration={800}
+          >
             Formación
-          </a>
-          <a className="menuContact" href="#skills">
+          </Link>
+          <Link
+            style={{ cursor: "pointer" }}
+            to="contact"
+            smooth={true}
+            offset={srollCorrection}
+            duration={800}
+          >
             Contacto
-          </a>
+          </Link>
         </section>
       </nav>
     </>

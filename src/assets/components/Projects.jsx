@@ -6,7 +6,7 @@ function Projects() {
   
   return (
     <>
-      <section className="portfolio">
+      <section className="portfolio" id="portfolio">
         <h1 className="title">Proyectos</h1>
         <ul className="projects">
           {projects.map((project) => {

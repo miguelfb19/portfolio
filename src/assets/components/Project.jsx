@@ -11,7 +11,7 @@ function Project({ img, title, content, tools, link, repository }) {
             target="_blank"
             rel="noreferrer"
             href={repository}
-             aria-label="View GitHub repository"
+            aria-label="View GitHub repository"
           ></a>
           <a
             className="bi bi-box-arrow-up-right"

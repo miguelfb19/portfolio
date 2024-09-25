@@ -3,6 +3,7 @@ import Icons from "./Icons";
 import picture from "../imagenes/fotos/portada.jpg";
 import "../css/styles.css";
 import presentationLetter from "../imagenes/certificados/cartaPresentacion.pdf";
+import {Link} from "react-scroll";
 
 function Header() {
   return (
@@ -27,7 +28,7 @@ function Header() {
             </a>
           </div>
           <div className="buttons">
-            <button className="btn btnHeader1">Proyectos</button>
+            <Link className="btn btnHeader1" to="portfolio" smooth={true}>Proyectos</Link>
             <a
               href={presentationLetter}
               target="_blank"
