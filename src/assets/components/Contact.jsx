@@ -10,8 +10,6 @@ function Contact() {
   let [alert, setAlert] = useState(false);
   let alertColor = useRef();
 
-  console.log(alertColor);
-
   const showAlert = (color, text, textColor) => {
     alertColor.current.style.backgroundColor = color;
     alertColor.current.style.color = textColor;
@@ -24,8 +22,6 @@ function Contact() {
 
   const sendForm = async (e) => {
     e.preventDefault();
-
-    console.log(process.env.REACT_APP_SERVICE_ID_EMAILJS);
 
     try {
       await emailjs.sendForm(
