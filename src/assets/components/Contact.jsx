@@ -1,35 +1,51 @@
 import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
-
   let name = useRef("");
   let email = useRef("");
   let message = useRef("");
+  let form = useRef();
 
-  let [alert, setAlert] = useState(false)
+  let [alert, setAlert] = useState(false);
 
   const showAlert = () => {
-    setAlert(true)
+    setAlert(true);
     setTimeout(() => {
-      setAlert(false)
+      setAlert(false);
     }, 3000);
-  }
-  
-  const sendForm = (e) => {
+  };
+
+  const sendForm = async (e) => {
     e.preventDefault();
 
-    //resetear el form
-    name.current.value = "";
-    email.current.value = "";
-    message.current.value = "";
-    showAlert()
+    try {
+      await emailjs.sendForm(
+        process.env.REACT_APP_SERVICE_ID_EMAILJS,
+        process.env.REACT_APP_TEMPLATE_ID_EMAILJS,
+        form.current,
+        {
+          publicKey: process.env.REACT_APP_PUBLIC_KEY_EMAILJS,
+        }
+      );
+
+      console.log("SUCCESS!");
+
+      //resetear el form
+      form.current.reset();
+      name.current.focus();
+      //Mostrar mensaje de éxito
+      showAlert();
+    } catch (error) {
+      console.log("FAILED...", error.text);
+    }
   };
 
   return (
     <>
       <section className="contact" id="contact">
         <h1 className="title">Formulario de contacto</h1>
-        <form className="form" onSubmit={sendForm}>
+        <form className="form" onSubmit={sendForm} ref={form}>
           <div className="formGroup">
             <label htmlFor="inputName">Nombre completo:</label>
             <input
@@ -71,7 +87,13 @@ function Contact() {
               Limpiar
             </button>
           </div>
-          <span style={{display: alert ? 'flex' : 'none'}} className="formAlert">¡¡¡Formulario enviado con éxito!!!</span>
+          <span
+            style={{ display: alert ? "flex" : "none" }}
+            className="formAlert"
+          >
+            ¡¡¡Formulario enviado con éxito!!!
+          </span>
+          
         </form>
       </section>
     </>
