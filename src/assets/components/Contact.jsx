@@ -8,8 +8,14 @@ function Contact() {
   let form = useRef();
 
   let [alert, setAlert] = useState(false);
+  let alertColor = useRef();
 
-  const showAlert = () => {
+  console.log(alertColor);
+
+  const showAlert = (color, text, textColor) => {
+    alertColor.current.style.backgroundColor = color;
+    alertColor.current.style.color = textColor;
+    alertColor.current.textContent = text;
     setAlert(true);
     setTimeout(() => {
       setAlert(false);
@@ -18,6 +24,8 @@ function Contact() {
 
   const sendForm = async (e) => {
     e.preventDefault();
+
+    console.log(process.env.REACT_APP_SERVICE_ID_EMAILJS);
 
     try {
       await emailjs.sendForm(
@@ -35,9 +43,14 @@ function Contact() {
       form.current.reset();
       name.current.focus();
       //Mostrar mensaje de éxito
-      showAlert();
+      showAlert("#23c483", "¡¡¡Formulario enviado con éxito!!!", "#1b263b");
     } catch (error) {
       console.log("FAILED...", error.text);
+      showAlert(
+        "red",
+        "Hubo un ERROR al enviar el formulario, por favor intente más tarde",
+        "white"
+      );
     }
   };
 
@@ -90,10 +103,10 @@ function Contact() {
           <span
             style={{ display: alert ? "flex" : "none" }}
             className="formAlert"
+            ref={alertColor}
           >
             ¡¡¡Formulario enviado con éxito!!!
           </span>
-          
         </form>
       </section>
     </>

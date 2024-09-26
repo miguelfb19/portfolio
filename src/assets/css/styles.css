@@ -666,8 +666,9 @@ details a:visited {
 
 .formAlert {
   justify-content: center;
+  text-align: center;
   filter: drop-shadow(5px 5px 5px white);
-  background-color: #23c483;
+  background-color: var(--colorGreen);
   color: var(--blue1);
   padding: 1em;
   width: 70%;
