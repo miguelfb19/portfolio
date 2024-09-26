@@ -24,7 +24,7 @@
   animation: scroll-reveal linear both;
   -webkit-animation: scroll-reveal linear both;
   animation-timeline: view();
-  animation-range: entry 20% cover 35%;
+  animation-range: entry 30% cover 35%;
   scroll-margin-top: 50vh;
 }
 
@@ -72,12 +72,12 @@ h2 {
   padding: 1em;
   font-size: 0.5em;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   font-weight: 500;
   color: var(--blue1);
   background-color: var(--Gray);
   border: solid 1px var(--Gray);
-  border-radius: 8px;
+  border-radius: 1.3em;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -94,15 +94,15 @@ h2 {
 }
 
 .btn2 {
-  padding: 1em;
+  padding: 1.3em;
   font-size: 0.5em;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   font-weight: 500;
   color: var(--Gray);
   border: solid 1px var(--Gray);
   background-color: transparent;
-  border-radius: 8px;
+  border-radius: 1.3em;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -272,31 +272,6 @@ h2 {
   color: var(--textColor);
 }
 
-#email {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.copy,
-.send {
-  display: flex;
-  justify-content: center;
-}
-
-.mailButtonIcon:hover {
-  filter: brightness(2);
-}
-
-.buttonsMailContent {
-  display: flex;
-}
-
-.buttonsMailContent a {
-  align-items: center;
-  align-content: center;
-}
-
 #redes {
   display: flex;
   justify-content: center;
@@ -343,15 +318,11 @@ h2 {
 }
 
 .buttons {
-  margin-top: 1em;
-  width: 60%;
-  height: 2em;
+  margin-top: 5em;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-}
-
-.buttons button {
-  width: 30%;
+  gap: 5em;
+  justify-content: center;
 }
 
 /* ==================================================================== */
@@ -434,7 +405,7 @@ h2 {
   align-items: center;
   list-style-type: none;
   padding: 3em;
-  width: 100%;
+  width: 120%;
 }
 
 .softSkills li {
@@ -447,19 +418,18 @@ h2 {
 /* ==================================================================== */
 
 .aboutMe {
-  height: 70vh;
+  min-height: 100vh;
   width: 65%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2em 0 4em 0;
 }
 
 .aboutMe .btn2 {
   margin: 0 auto;
   margin-top: 2em;
-  width: 15%;
+  width: 25%;
 }
 
 /* ==================================================================== */
@@ -495,7 +465,7 @@ h2 {
 }
 
 .card {
-  width: 15em;
+  width: 17em;
   border: solid 2px var(--colorGreen);
   border-radius: 25px;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
@@ -576,7 +546,7 @@ h2 {
   width: 80vw;
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  row-gap: 7em;
   padding: 0;
   align-content: center;
   align-items: center;
@@ -587,8 +557,6 @@ h2 {
 .educationExp .title {
   width: 100vw;
   margin: 0;
-  height: 20%;
-  align-content: center;
 }
 
 .edu,
@@ -599,12 +567,12 @@ h2 {
 .edu {
   color: var(--Gray);
   line-height: 2em;
-  max-height: 40%;
-  overflow-y: auto;
+  max-height:35vh;
+  overflow-y: scroll;
 }
 
 .exp {
-  max-height: 40%;
+  max-height: 35vh;
   overflow-y: auto;
 }
 
@@ -750,13 +718,20 @@ footer {
     }
   }
 
+  .title{
+    font-size: 4em;
+    margin-bottom: 1em;
+  }
+
   .btn2,
   .btn {
-    letter-spacing: 1px;
+    letter-spacing: 1.8px;
+    font-size: 1.1em;
+    padding: 1.2em;
   }
 
   .mainMenu {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 5fr;
   }
   .mainMenu a {
     font-size: 1.5em;
@@ -767,7 +742,6 @@ footer {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    gap: 10em;
   }
 
   .ppalPicture {
@@ -779,16 +753,13 @@ footer {
     margin: 0 auto;
   }
 
+  .initialInfo h3{
+    font-size: 2em;
+  }
+
   .initialInfo .title {
     width: 90%;
-  }
-
-  .textEmail {
-    font-size: 1.5em;
-  }
-
-  .mailButtonIcon {
-    padding: 1em !important;
+    margin-bottom: 0;
   }
 
   .git,
@@ -796,51 +767,73 @@ footer {
     height: 3em;
   }
 
-  .btn,
-  .btn2 {
-    font-size: 0.8em;
-    padding: 1.8em;
-  }
-
-  .skills {
-    height: 80vh;
-  }
-
   .softSkills {
     width: 130%;
+    font-size: 1.3em;
   }
 
+  .hardSkills figcaption {
+    font-size: 1.4em;
+}
+
   .aboutMe p {
-    font-size: 1.5em;
+    font-size: 1.7em;
+  }
+
+  .aboutMe .btn2{
+    width: 50%;
+  }
+
+  .projects{
+    gap: 4em;
   }
 
   .card p {
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
 
-  .educationExp h2 {
-    font-size: 1.4em;
+  .card h4{
+    font-size: 1.5em;
   }
 
-  .educationExp .title {
-    margin-bottom: 1em;
+  .projectsLink a {
+    font-size: 2em;
   }
 
   .educationExp {
-    width: 100vw;
-    height: 90vh;
-    gap: 1em;
+    min-width: 100vw;
+    max-height: 90vh;
+  }
+
+  .exp h2 {
+    font-size: 1.7em;
+  }
+
+  .exp p{
+    font-size: 1.4em;
+  }
+
+  .edu {
+    font-size: 1.4em;
   }
 
   .edu,
   .exp {
-    width: 45vw;
+    width: 47vw;
+  }
+
+  .form *:not(.buttonsContact)  {
+    font-size: 1.3em;
   }
 
   .btnTop {
     font-size: 2.5em;
     width: 2em;
     height: 2em;
+  }
+
+  footer{
+    font-size: 1.7em;
   }
 }
 
@@ -861,11 +854,14 @@ footer {
   }
 
   .mainMenu {
-    grid-template-columns: 1fr 2fr;
-    width: 100%;
+    grid-template-columns: 1fr 15fr;
+  }
+
+  .menuLeft img{
+    margin-left: 1em;
   }
   .mainMenu a {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 
   .header {
@@ -873,7 +869,6 @@ footer {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    gap: 6em;
   }
 
   .ppalPicture {
@@ -898,8 +893,8 @@ footer {
     width: 18em;
   }
 
-  .educationExp {
-    font-size: 1.2em;
+  .form, .contact .title{
+    max-width: 80%;
   }
 }
 
@@ -914,17 +909,15 @@ footer {
       -webkit-transform: translateX(0);
     }
     to {
-      transform: translateX(-160%);
-      -webkit-transform: translateX(-160%);
+      transform: translateX(-170%);
+      -webkit-transform: translateX(-170%);
     }
   }
 
   .title {
-    font-size: 2em;
+    font-size: 2.5em;
   }
   .mainMenu {
-    grid-template-columns: 1fr 5fr;
-    width: 100%;
     height: 20vw;
   }
   .mainMenu a {
@@ -937,7 +930,7 @@ footer {
   }
 
   .menuRight {
-    gap: 1em;
+    gap: 0.6em;
   }
 
   .header {
@@ -946,17 +939,17 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 5em;
-    height: 70vh;
+    height: 100vh;
     font-size: 0.6em;
   }
 
   .ppalPicture {
-    width: 40vw;
-    height: 20vh;
+    width: 200px;
+    height: 200px;
   }
 
   .header .title {
-    font-size: 3em;
+    font-size: 3.5em;
   }
 
   .aboutMe {
@@ -988,23 +981,28 @@ footer {
     height: 6em;
   }
 
-  figure img {
-    height: 2.5em;
+  .hardSkills figure img {
+    height: 3em;
   }
 
-  figcaption {
+  .hardSkills figcaption {
     font-size: 1em;
   }
 
   .softSkills {
     font-size: 0.8em;
     padding: 1.5em;
-    width: 280%;
+    width: 300%;
   }
 
   .aboutMe p {
     font-size: 1em;
     margin-top: 3em;
+  }
+
+  .aboutMe .btn2{
+    width: 50%;
+    font-size: 0.7em;
   }
 
   .portfolio {
@@ -1025,13 +1023,20 @@ footer {
   }
 
   .educationExp {
-    font-size: 0.7em;
-    align-content: flex-start;
-    height: 60vh;
+    font-size: 0.6em;
+    max-height: 60vh;
+  }
+
+  .educationExp .title{
+    font-size: 4em;
   }
 
   footer {
-    font-size: 0.8em;
+    font-size: 0.9em;
+  }
+
+  .form{
+    font-size: 0.6em;
   }
 
   .btnTop {
