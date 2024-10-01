@@ -21,8 +21,9 @@
 .portfolio,
 .educationExp,
 .contact {
-  animation: scroll-reveal linear both;
-  -webkit-animation: scroll-reveal linear both;
+  animation-name: scroll-reveal;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
   animation-timeline: view();
   animation-range: entry 30% cover 35%;
   scroll-margin-top: 50vh;
