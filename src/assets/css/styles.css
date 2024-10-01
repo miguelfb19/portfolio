@@ -29,11 +29,11 @@
 }
 
 @keyframes scroll-reveal {
-  from {
+  0% {
     opacity: 0;
     translate: 0 20vh;
   }
-  to {
+  100% {
     opacity: 1;
     translate: 0 0;
   }
@@ -709,11 +709,11 @@ footer {
 
 @media (max-width: 1024px) {
   @keyframes scrollCarrousel {
-    from {
+    0% {
       transform: translateX(0);
       -webkit-transform: translateX(0);
     }
-    to {
+    100% {
       transform: translateX(-80%);
       -webkit-transform: translateX(-80%);
     }
@@ -844,11 +844,11 @@ footer {
 
 @media (max-width: 850px) {
   @keyframes scrollCarrousel {
-    from {
+    0% {
       transform: translateX(0);
       -webkit-transform: translateX(0);
     }
-    to {
+    100% {
       transform: translateX(-130%);
       -webkit-transform: translateX(-130%);
     }
