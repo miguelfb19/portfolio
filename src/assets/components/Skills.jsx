@@ -1,4 +1,3 @@
-import React from "react";
 import Skill from "./Skill";
 import { hardSkills, softSkills } from "../models/all";
 
