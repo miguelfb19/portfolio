@@ -2,9 +2,6 @@ import { useEffect, useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
 
 function ButtonToTop() {
-
-    
-    
   //Hacemos el scrollToTop con una funcion debido a que los parametros como 'duration'
   //no los agarra directamente en el JSX
   let scrollToTop = () => {
@@ -13,7 +10,7 @@ function ButtonToTop() {
   const [showBtn, setShowBtn] = useState(true);
 
   let vh = window.innerHeight;
-  
+
   //Funcion para mostrar o quitar el boton de Scroll Top
   const handleButton = () => {
     if (window.scrollY > vh) {
@@ -29,11 +26,12 @@ function ButtonToTop() {
   //Ejecutamos el handle en cuando se renderiza el componente para que lo quite en la pantalla inicial
   useEffect(() => {
     handleButton();
+    // eslint-disable-next-line
   }, []);
 
   return (
     <span
-      style={{ display: showBtn ? 'flex' : 'none' }}
+      style={{ display: showBtn ? "flex" : "none" }}
       className="btnTop bi bi-chevron-up"
       onClick={scrollToTop}
     ></span>
