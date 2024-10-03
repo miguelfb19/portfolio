@@ -719,7 +719,7 @@ footer {
 /* PC PEQUEÑO - IPAD GRANDE */
 /* ==================================================================== */
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   @keyframes scrollCarrousel {
     0% {
       transform: translateX(0);
