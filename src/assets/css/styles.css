@@ -927,8 +927,8 @@ footer {
       -webkit-transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(var(--scrollAnimationCarrousel) - 210%));
-      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 210%));
+      transform: translateX(calc(var(--scrollAnimationCarrousel) - 140%));
+      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 140%));
     }
   }
 
