@@ -15,9 +15,9 @@ function Education() {
                   <summary>{certification.title}</summary>
                   <p>{`- ${certification.content}`}</p>
                   <p>{certification.date}</p>
-                  <a href={certification.doc} target="_blank" rel="noreferrer"> 
+                  {certification.doc && <a href={certification.doc} target="_blank" rel="noreferrer"> 
                     Ver certificación
-                  </a>
+                  </a>}
                 </details>
               );
             })}

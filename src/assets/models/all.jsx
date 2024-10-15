@@ -18,6 +18,7 @@ import nodejs from "../imagenes/logos/nodejs.svg";
 import typescript from "../imagenes/logos/typescript.svg";
 import postman from "../imagenes/logos/postman.svg";
 import git from "../imagenes/logos/git.svg";
+import tailwind from "../imagenes/logos/tailwind.svg";
 import itsCert from "../imagenes/certificados/diploma_ITS.jpg";
 import utpCert from "../imagenes/certificados/Diploma_UTP_CDR.jpg";
 import espDevWeb from "../imagenes/certificados/ESPECIALIZACION_EN_PROGRAMACION_WEB.png";
@@ -42,6 +43,7 @@ export const icons = {
   javascript: javascript,
   arrow: arrow,
   bootstrap: bootstrap,
+  tailwind: tailwind,
   desplegable: desplegable,
   figma: figma,
   mongodb: mongodb,
@@ -103,11 +105,12 @@ export const hardSkills = [
   "css",
   "javascript",
   "typescript",
-  "figma",
-  "bootstrap",
   "react",
   "vue",
   "angular",
+  "bootstrap",
+  "tailwind",
+  "figma",
   "nodejs",
   "mongodb",
   "postman",
@@ -128,7 +131,7 @@ export const softSkills = [
 export const experiences = [
   {
     title: "Desarrollador FrontEnd Freelance",
-    xp: "1 año",
+    xp: "1+ año",
   },
   {
     title: "Coordinador general de proyectos y manejo de procesos logísticos",
@@ -144,6 +147,18 @@ export const certifications = [
     doc: espDevWeb,
   },
   {
+    title: "MASTER EN FRAMEWORKS JS",
+    content: "UDEMY",
+    date: "18 de Enero 2023",
+    doc: masterFramworks,
+  },
+  {
+    title: 'INGENIERIA DE SISTEMAS Y COMPUTACIÓN (Interrumpido - 5 semestres)',
+    content: 'Universidad Tecnológica de Pereira',
+    date: '2012-2015',
+    doc: null,
+  },
+  {
     title: "TÉCNICO SOPORTE SISTEMAS",
     content: "Centro de Educación Nacional CENAL",
     date: "Diciembre 2023",
@@ -154,12 +169,6 @@ export const certifications = [
     content: "NETZUN",
     date: "Junio 2023",
     doc: gitCert,
-  },
-  {
-    title: "MASTER EN FRAMEWORKS JS",
-    content: "UDEMY",
-    date: "18 de Enero 2023",
-    doc: masterFramworks,
   },
   {
     title: "BACHILLER TÉCNICO EN MANTENIMIENTO DE COMPUTADORES",

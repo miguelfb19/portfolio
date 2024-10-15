@@ -10,6 +10,7 @@
   --textColor: #e0e1dd;
   --mont: "Montserrat", sans-serif;
   --jersey: "Jersey 25", sans-serif;
+  --scrollAnimationCarrousel: -50%;
 }
 
 /* ==================================================================== */
@@ -352,8 +353,8 @@ h2 {
   justify-content: start;
   list-style-type: none;
   padding: 1em;
-  animation: scrollCarrousel 10s linear infinite alternate;
-  -webkit-animation: scrollCarrousel 10s linear infinite alternate;
+  animation: scrollCarrousel 8s linear infinite alternate;
+  -webkit-animation: scrollCarrousel 8s linear infinite alternate;
   width: 160%;
 }
 
@@ -363,8 +364,8 @@ h2 {
     -webkit-transform: translateX(0);
   }
   to {
-    transform: translateX(-40%);
-    -webkit-transform: translateX(-40%);
+    transform: translateX(var(--scrollAnimationCarrousel));
+    -webkit-transform: translateX(var(--scrollAnimationCarrousel));
   }
 }
 
@@ -719,15 +720,15 @@ footer {
 /* PC PEQUEÑO - IPAD GRANDE */
 /* ==================================================================== */
 
-@media (max-width: 1023px) {
+@media (max-width: 1025px) {
   @keyframes scrollCarrousel {
     0% {
       transform: translateX(0);
       -webkit-transform: translateX(0);
     }
     100% {
-      transform: translateX(-80%);
-      -webkit-transform: translateX(-80%);
+      transform: translateX(calc(var(--scrollAnimationCarrousel) - 50%));
+      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 50%));
     }
   }
 
@@ -865,8 +866,8 @@ footer {
       -webkit-transform: translateX(0);
     }
     100% {
-      transform: translateX(-130%);
-      -webkit-transform: translateX(-130%);
+      transform: translateX(calc(var(--scrollAnimationCarrousel) - 100%));
+      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 100%));
     }
   }
 
@@ -926,8 +927,8 @@ footer {
       -webkit-transform: translateX(0);
     }
     100% {
-      transform: translateX(-170%);
-      -webkit-transform: translateX(-170%);
+      transform: translateX(calc(var(--scrollAnimationCarrousel) - 210%));
+      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 210%));
     }
   }
 
