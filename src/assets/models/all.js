@@ -30,6 +30,7 @@ import picBlogVue from "../imagenes/projectVue.png";
 import picBlogReact from "../imagenes/projectReact.png";
 import picBlogAngular from "../imagenes/projectAngular.png";
 import picExpenseControl from "../imagenes/control_de_gastos.png";
+import redux from '../imagenes/logos/redux.svg'
 
 export const icons = {
   code: code,
@@ -51,6 +52,7 @@ export const icons = {
   typescript: typescript,
   postman: postman,
   git: git,
+  redux:redux,
 };
 
 export const projects = [
@@ -108,6 +110,7 @@ export const hardSkills = [
   "react",
   "vue",
   "angular",
+  'redux',
   "bootstrap",
   "tailwind",
   "figma",

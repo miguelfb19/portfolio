@@ -10,7 +10,9 @@
   --textColor: #e0e1dd;
   --mont: "Montserrat", sans-serif;
   --jersey: "Jersey 25", sans-serif;
-  --scrollAnimationCarrousel: -50%;
+  --scrollAnimationCarrousel: -60%; 
+  --scrollAnimationTime: 10s;
+  /* agregar para cada icono un 10% */
 }
 
 /* ==================================================================== */
@@ -353,9 +355,9 @@ h2 {
   justify-content: start;
   list-style-type: none;
   padding: 1em;
-  animation: scrollCarrousel 8s linear infinite alternate;
-  -webkit-animation: scrollCarrousel 8s linear infinite alternate;
-  width: 160%;
+  animation: scrollCarrousel var(--scrollAnimationTime) linear infinite alternate;
+  -webkit-animation: scrollCarrousel var(--scrollAnimationTime) linear infinite alternate;
+  width: 155%;
 }
 
 @keyframes scrollCarrousel {
@@ -727,8 +729,8 @@ footer {
       -webkit-transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(var(--scrollAnimationCarrousel) - 50%));
-      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 50%));
+      transform: translateX(calc(var(--scrollAnimationCarrousel) - 55%));
+      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 55%));
     }
   }
 
@@ -866,8 +868,8 @@ footer {
       -webkit-transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(var(--scrollAnimationCarrousel) - 100%));
-      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 100%));
+      transform: translateX(calc(var(--scrollAnimationCarrousel) - 110%));
+      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 110%));
     }
   }
 
@@ -927,8 +929,8 @@ footer {
       -webkit-transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(var(--scrollAnimationCarrousel) - 140%));
-      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 140%));
+      transform: translateX(calc(var(--scrollAnimationCarrousel) - 155%));
+      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 155%));
     }
   }
 
