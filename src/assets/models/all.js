@@ -31,6 +31,7 @@ import picBlogReact from "../imagenes/projectReact.png";
 import picBlogAngular from "../imagenes/projectAngular.png";
 import picExpenseControl from "../imagenes/control_de_gastos.png";
 import redux from '../imagenes/logos/redux.svg'
+import next from '../imagenes/logos/next.svg'
 
 export const icons = {
   code: code,
@@ -53,6 +54,7 @@ export const icons = {
   postman: postman,
   git: git,
   redux:redux,
+  nextjs: next,
 };
 
 export const projects = [
@@ -108,6 +110,7 @@ export const hardSkills = [
   "javascript",
   "typescript",
   "react",
+  'nextjs',
   "vue",
   "angular",
   'redux',
@@ -154,6 +157,12 @@ export const certifications = [
     content: "UDEMY",
     date: "18 de Enero 2023",
     doc: masterFramworks,
+  },
+  {
+    title: 'NEXTJS: EL FRAMEWORK DE REACT PARA PRODUCCIÓN',
+    content: 'UDEMY',
+    date: 'Septiembre 2024 - Actualmente',
+    doc: null
   },
   {
     title: 'INGENIERIA DE SISTEMAS Y COMPUTACIÓN (Interrumpido - 5 semestres)',

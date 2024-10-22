@@ -10,7 +10,7 @@
   --textColor: #e0e1dd;
   --mont: "Montserrat", sans-serif;
   --jersey: "Jersey 25", sans-serif;
-  --scrollAnimationCarrousel: -60%; 
+  --scrollAnimationCarrousel: -70%; 
   --scrollAnimationTime: 10s;
   /* agregar para cada icono un 10% */
 }
@@ -868,8 +868,8 @@ footer {
       -webkit-transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(var(--scrollAnimationCarrousel) - 110%));
-      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 110%));
+      transform: translateX(calc(var(--scrollAnimationCarrousel) - 115%));
+      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 115%));
     }
   }
 
@@ -929,8 +929,8 @@ footer {
       -webkit-transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(var(--scrollAnimationCarrousel) - 155%));
-      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 155%));
+      transform: translateX(calc(var(--scrollAnimationCarrousel) - 160%));
+      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 160%));
     }
   }
 
