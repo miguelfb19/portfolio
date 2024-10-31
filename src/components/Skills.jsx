@@ -1,5 +1,5 @@
 import Skill from "./Skill";
-import { hardSkills, softSkills } from "../models/all";
+import { hardSkills, softSkills } from "../models";
 
 function Skills() {
   const title = "Habilidades <SKILLS>";

@@ -1,13 +1,13 @@
 import "./assets/css/styles.css";
-import Menu from "./assets/components/Menu";
-import Header from "./assets/components/Header";
-import Skills from "./assets/components/Skills";
-import AboutMe from "./assets/components/AboutMe";
-import Projects from "./assets/components/Projects";
-import Education from "./assets/components/Education";
-import Icons from "./assets/components/Icons";
-import Contact from "./assets/components/Contact";
-import ButtonToTop from "./assets/components/ButtonToTop";
+import Menu from "./components/Menu";
+import Header from "./components/Header";
+import Skills from "./components/Skills";
+import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
+import Education from "./components/Education";
+import Icons from "./components/Icons";
+import Contact from "./components/Contact";
+import ButtonToTop from "./components/ButtonToTop";
 
 function App() {
   return (

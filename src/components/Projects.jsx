@@ -1,6 +1,5 @@
-import React from "react";
 import Project from "./Project";
-import {projects} from '../models/all'
+import {projects} from '../models'
 
 function Projects() {
   

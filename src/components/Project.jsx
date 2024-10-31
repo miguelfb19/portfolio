@@ -1,4 +1,3 @@
-import React from "react";
 import Icons from "./Icons";
 
 function Project({ img, title, content, tools, link, repository }) {

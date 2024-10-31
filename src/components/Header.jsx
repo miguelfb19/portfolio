@@ -1,8 +1,7 @@
-import React from "react";
 import Icons from "./Icons";
-import picture from "../imagenes/fotos/portada.jpg";
-import "../css/styles.css";
-import presentationLetter from "../imagenes/certificados/cartaPresentacion.pdf";
+import picture from "../assets/imagenes/fotos/portada.jpg";
+import "../assets/css/styles.css";
+import presentationLetter from "../assets/imagenes/certificados/cartaPresentacion.pdf";
 import {Link} from "react-scroll";
 
 function Header() {

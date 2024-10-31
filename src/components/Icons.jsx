@@ -1,5 +1,4 @@
-import React from "react";
-import { icons } from "../models/all";
+import { icons } from "../models";
 
 function Icons({ iconName, className }) {
   const iconSrc = icons[iconName];

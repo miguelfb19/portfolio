@@ -1,5 +1,4 @@
-import React from "react";
-import presentationLetter from "../imagenes/certificados/cartaPresentacion.pdf";
+import presentationLetter from "../assets/imagenes/certificados/cartaPresentacion.pdf";
 
 function AboutMe() {
   const info = {

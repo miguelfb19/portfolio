@@ -1,5 +1,5 @@
 import React from "react";
-import { certifications, experiences } from '../models/all'
+import { certifications, experiences } from '../models'
 
 function Education() {
   
