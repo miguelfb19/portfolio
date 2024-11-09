@@ -10,7 +10,7 @@
   --textColor: #e0e1dd;
   --mont: "Montserrat", sans-serif;
   --jersey: "Jersey 25", sans-serif;
-  --scrollAnimationCarrousel: -70%; 
+  --scrollAnimationCarrousel: -70%;
   --scrollAnimationTime: 10s;
   /* agregar para cada icono un 10% */
 }
@@ -167,21 +167,26 @@ h2 {
 
 .mainMenu {
   background-color: var(--blue1);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
   width: 100vw;
   height: 10vh;
+}
+
+.spanMenu {
+  flex: 1;
 }
 
 .menuRight {
   display: flex;
   gap: 2em;
   justify-content: center;
+  padding-right: 3em;
 }
 
 .menuLeft {
   display: flex;
+  padding-left: 2em;
 }
 
 .menuLeft img {
@@ -355,8 +360,10 @@ h2 {
   justify-content: start;
   list-style-type: none;
   padding: 1em;
-  animation: scrollCarrousel var(--scrollAnimationTime) linear infinite alternate;
-  -webkit-animation: scrollCarrousel var(--scrollAnimationTime) linear infinite alternate;
+  animation: scrollCarrousel var(--scrollAnimationTime) linear infinite
+    alternate;
+  -webkit-animation: scrollCarrousel var(--scrollAnimationTime) linear infinite
+    alternate;
   width: 155%;
 }
 
@@ -478,12 +485,12 @@ h2 {
   height: 16.5em;
   overflow: hidden;
   transform: scale(0.9);
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   interpolate-size: allow-keywords;
   /* esta propiedad (interpolate-size) aun no esta soportada en todos los navegadores  */
 }
 
-.card:hover{
+.card:hover {
   height: auto;
   transform: scale(1);
 }
@@ -582,7 +589,7 @@ h2 {
 .edu {
   color: var(--Gray);
   line-height: 2em;
-  max-height:35vh;
+  max-height: 35vh;
   overflow-y: scroll;
 }
 
@@ -730,11 +737,13 @@ footer {
     }
     100% {
       transform: translateX(calc(var(--scrollAnimationCarrousel) - 55%));
-      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 55%));
+      -webkit-transform: translateX(
+        calc(var(--scrollAnimationCarrousel) - 55%)
+      );
     }
   }
 
-  .title{
+  .title {
     font-size: 4em;
     margin-bottom: 1em;
   }
@@ -745,10 +754,7 @@ footer {
     font-size: 1.1em;
     padding: 1.2em;
   }
-
-  .mainMenu {
-    grid-template-columns: 1fr 5fr;
-  }
+  
   .mainMenu a {
     font-size: 1.5em;
   }
@@ -769,7 +775,7 @@ footer {
     margin: 0 auto;
   }
 
-  .initialInfo h3{
+  .initialInfo h3 {
     font-size: 2em;
   }
 
@@ -790,21 +796,21 @@ footer {
 
   .hardSkills figcaption {
     font-size: 1.4em;
-}
+  }
 
   .aboutMe p {
     font-size: 1.7em;
   }
 
-  .aboutMe .btn2{
+  .aboutMe .btn2 {
     width: 50%;
   }
 
-  .projects{
+  .projects {
     gap: 4em;
   }
 
-  .card{
+  .card {
     height: 17.4em;
   }
 
@@ -812,7 +818,7 @@ footer {
     font-size: 1.2em;
   }
 
-  .card h4{
+  .card h4 {
     font-size: 1.3em;
   }
 
@@ -829,7 +835,7 @@ footer {
     font-size: 1.7em;
   }
 
-  .exp p{
+  .exp p {
     font-size: 1.4em;
   }
 
@@ -842,7 +848,7 @@ footer {
     width: 47vw;
   }
 
-  .form *:not(.buttonsContact)  {
+  .form *:not(.buttonsContact) {
     font-size: 1.3em;
   }
 
@@ -852,7 +858,7 @@ footer {
     height: 2em;
   }
 
-  footer{
+  footer {
     font-size: 1.7em;
   }
 }
@@ -869,19 +875,57 @@ footer {
     }
     100% {
       transform: translateX(calc(var(--scrollAnimationCarrousel) - 115%));
-      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 115%));
+      -webkit-transform: translateX(
+        calc(var(--scrollAnimationCarrousel) - 115%)
+      );
     }
   }
 
-  .mainMenu {
-    grid-template-columns: 1fr 15fr;
+  .mainMenu{
+    height: 7vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 
-  .menuLeft img{
+  .menuRight{
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4em;
+    position: fixed;
+    right: 0;
+    top: 7vh;
+    backdrop-filter: blur(50px);
+    padding: 3em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    height: 100%;
+    animation: collapseMenu .3s linear both;
+  }
+
+  @keyframes collapseMenu {
+    0%{
+      max-height: 0;
+      opacity: .3;
+    }
+    100%{
+      max-height: 100%;
+      opacity: 1;
+    }
+  }
+
+  .btnTop{
+    z-index: 2;
+  }
+
+  .menuLeft img {
     margin-left: 1em;
   }
-  .mainMenu a {
-    font-size: 1.3em;
+
+  .hamburger{
+    padding-right: 2em;
   }
 
   .header {
@@ -913,7 +957,8 @@ footer {
     width: 18em;
   }
 
-  .form, .contact .title{
+  .form,
+  .contact .title {
     max-width: 80%;
   }
 }
@@ -930,27 +975,23 @@ footer {
     }
     100% {
       transform: translateX(calc(var(--scrollAnimationCarrousel) - 160%));
-      -webkit-transform: translateX(calc(var(--scrollAnimationCarrousel) - 160%));
+      -webkit-transform: translateX(
+        calc(var(--scrollAnimationCarrousel) - 160%)
+      );
     }
   }
 
   .title {
     font-size: 2.5em;
   }
-  .mainMenu {
-    height: 20vw;
-  }
-  .mainMenu a {
-    font-size: 0.75em;
-  }
 
   .mainMenu img {
-    height: 1.4em;
-    margin: 0 0 0 0.7em;
+    height: 2em;
   }
 
   .menuRight {
-    gap: 0.6em;
+    gap: 4em;
+    font-size: 0.7em;
   }
 
   .header {
@@ -1020,7 +1061,7 @@ footer {
     margin-top: 3em;
   }
 
-  .aboutMe .btn2{
+  .aboutMe .btn2 {
     width: 50%;
     font-size: 0.7em;
   }
@@ -1042,7 +1083,7 @@ footer {
     font-size: 0.7em;
   }
 
-  .card h4{
+  .card h4 {
     font-size: 1.2em;
   }
 
@@ -1051,7 +1092,7 @@ footer {
     max-height: 60vh;
   }
 
-  .educationExp .title{
+  .educationExp .title {
     font-size: 4em;
   }
 
@@ -1059,7 +1100,7 @@ footer {
     font-size: 0.9em;
   }
 
-  .form{
+  .form {
     font-size: 0.6em;
   }
 
