@@ -251,15 +251,6 @@ h2 {
   height: 26vw;
 }
 
-.ppalPicture:hover {
-  background-color: var(--colorGreen);
-  box-shadow: 0px 8px 15px var(--colorGreen);
-  color: #fff;
-  transform: translateY(-7px);
-  animation: levitate 1.5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-  animation-delay: 0.5s;
-}
-
 .letter {
   color: var(--colorGreen);
   margin: 0 auto;

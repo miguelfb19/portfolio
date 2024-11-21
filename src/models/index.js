@@ -1,5 +1,10 @@
 //Importamos todos los archivos que vamos a necesitar
 
+// LOGOS
+// ________________________________________________________
+
+import redux from '../assets/imagenes/logos/redux.svg'
+import next from '../assets/imagenes/logos/next.svg'
 import code from "../assets/imagenes/logos/code.svg";
 import github from "../assets/imagenes/logos/github.svg";
 import linkedin from "../assets/imagenes/logos/linkedin.svg";
@@ -19,19 +24,28 @@ import typescript from "../assets/imagenes/logos/typescript.svg";
 import postman from "../assets/imagenes/logos/postman.svg";
 import git from "../assets/imagenes/logos/git.svg";
 import tailwind from "../assets/imagenes/logos/tailwind.svg";
+import prisma from "../assets/imagenes/logos/prisma.svg";
+
+// CERTIFICADOS
+// ________________________________________________________
+
 import itsCert from "../assets/imagenes/certificados/diploma_ITS.jpg";
 import utpCert from "../assets/imagenes/certificados/Diploma_UTP_CDR.jpg";
 import espDevWeb from "../assets/imagenes/certificados/ESPECIALIZACION_EN_PROGRAMACION_WEB.png";
 import masterFramworks from "../assets/imagenes/certificados/master_frameworkJS.jpg";
 import tecnicoSis from "../assets/imagenes/certificados/tecnico_sistemas.jpg";
 import gitCert from "../assets/imagenes/certificados/git_github_profesional.jpg";
+
+// IMAGENES
+// ________________________________________________________
+
 import picCRUD from "../assets/imagenes/projectCRUD.png";
 import picBlogVue from "../assets/imagenes/projectVue.png";
 import picBlogReact from "../assets/imagenes/projectReact.png";
 import picBlogAngular from "../assets/imagenes/projectAngular.png";
 import picExpenseControl from "../assets/imagenes/control_de_gastos.png";
-import redux from '../assets/imagenes/logos/redux.svg'
-import next from '../assets/imagenes/logos/next.svg'
+import picMenualamano from '../assets/imagenes/menu_a_la_mano.png'
+
 
 export const icons = {
   code: code,
@@ -55,9 +69,18 @@ export const icons = {
   git: git,
   redux:redux,
   nextjs: next,
+  prisma: prisma
 };
 
 export const projects = [
+  {
+    img: picMenualamano,
+    title: "Menú a la mano",
+    content: "App para buscar ideas de menús a la hora de cocinar, ideal cuando no sabes que hacer al almuerzo",
+    tools: ["nextjs", "tailwind", "mongodb", "prisma"],
+    link: "https://menualamano.vercel.app",
+    repository: "https://github.com/miguelfb19/menu-a-la-mano",
+  },
   {
     img: picCRUD,
     title: "CRUD",
