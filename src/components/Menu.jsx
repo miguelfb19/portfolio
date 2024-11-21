@@ -15,7 +15,7 @@ function Menu() {
     if (vw > 850) {
       setOpen(true);
     }
-  }, []);
+  }, [vw]);
 
   return (
     <>

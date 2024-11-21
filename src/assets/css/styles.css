@@ -636,10 +636,8 @@ details a:visited {
   border: solid 1px var(--colorGreen);
   border-radius: 10px;
   padding: 3em;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1em;
   margin-top: 3em;
+  position: relative;
 }
 
 .buttonsContact {
@@ -677,19 +675,38 @@ details a:visited {
   outline-offset: -5px;
 }
 
-.formAlert {
-  justify-content: center;
-  text-align: center;
-  filter: drop-shadow(5px 5px 5px white);
-  background-color: var(--colorGreen);
-  color: var(--blue1);
-  padding: 1em;
-  width: 70%;
-  margin: auto;
-  margin-top: 1em;
-  display: none;
-  border-radius: 5px;
+.containerForm{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
 }
+
+.loadingSpinner{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  animation: spin .7s linear infinite;
+}
+
+.loadingText{
+  color: white;
+}
+
+.loadingContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+} 
 
 /* ==================================================================== */
 /* FOOTER */
