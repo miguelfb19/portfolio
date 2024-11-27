@@ -142,6 +142,7 @@ export const hardSkills = [
   "figma",
   "nodejs",
   "mongodb",
+  "prisma",
   "postman",
   "git",
 ];

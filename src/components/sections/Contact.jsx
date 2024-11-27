@@ -1,14 +1,14 @@
-import { LoadingSpinner } from "./LoadingSpinner";
+import { LoadingSpinner } from "../LoadingSpinner";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
-function Contact() {
+function Contact({ bgColor = "" }) {
   let name = useRef("");
   let email = useRef("");
   let message = useRef("");
   let form = useRef();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const submitAlert = (message, icon) => {
     const Toast = Swal.mixin({
@@ -30,7 +30,7 @@ function Contact() {
 
   const sendForm = async (e) => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
     try {
       await emailjs.sendForm(
         process.env.REACT_APP_SERVICE_ID_EMAILJS,
@@ -43,7 +43,7 @@ function Contact() {
       //resetear el form
       form.current.reset();
       name.current.focus();
-      setLoading(false)
+      setLoading(false);
       //Mostrar mensaje de éxito
       submitAlert("¡¡¡Mensaje enviado con éxito!!!", "success");
     } catch (error) {
@@ -54,10 +54,13 @@ function Contact() {
 
   return (
     <>
-      <section className="contact" id="contact">
+      <section className={`contact ${bgColor}`} id="contact">
         <h1 className="title">Formulario de contacto</h1>
         <form className="form" onSubmit={sendForm} ref={form}>
-          <div className="containerForm" style={loading ? {opacity: .1} : {}}>
+          <div
+            className="containerForm"
+            style={loading ? { opacity: 0.1 } : {}}
+          >
             <div className="formGroup">
               <label htmlFor="inputName">Nombre completo:</label>
               <input
@@ -100,10 +103,12 @@ function Contact() {
               </button>
             </div>
           </div>
-          {loading && <div className="loadingContainer">
-            <LoadingSpinner size={50}/>
-            <span className="loadingText">Enviando...</span>
-          </div>}
+          {loading && (
+            <div className="loadingContainer">
+              <LoadingSpinner size={50} />
+              <span className="loadingText">Enviando...</span>
+            </div>
+          )}
         </form>
       </section>
     </>

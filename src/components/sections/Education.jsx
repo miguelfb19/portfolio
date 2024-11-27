@@ -1,11 +1,11 @@
 import React from "react";
-import { certifications, experiences } from '../models'
+import { certifications, experiences } from '../../models'
 
-function Education() {
+function Education({ bgColor = "" }) {
   
   return (
     <>
-      <section className="educationExp" id="education">
+      <section className={`educationExp ${bgColor}`} id="education">
         <h1 className="title">Formación y experiencia</h1>
         <section className="edu">
           <section className="details">

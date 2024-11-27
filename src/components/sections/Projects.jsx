@@ -1,11 +1,11 @@
-import Project from "./Project";
-import {projects} from '../models'
+import Project from "../Project";
+import {projects} from '../../models'
 
-function Projects() {
+function Projects({ bgColor = "" }) {
   
   return (
     <>
-      <section className="portfolio" id="portfolio">
+      <section className={`portfolio ${bgColor}`} id="portfolio">
         <h1 className="title">Proyectos</h1>
         <ul className="projects">
           {projects.map((project) => {

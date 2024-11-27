@@ -1,12 +1,12 @@
-import Skill from "./Skill";
-import { hardSkills, softSkills } from "../models";
+import Skill from "../Skill";
+import { hardSkills, softSkills } from "../../models";
 
-function Skills() {
+function Skills({ bgColor = "" }) {
   const title = "Habilidades <SKILLS>";
 
   return (
     <>
-      <section className="skills" id="skills">
+      <section className={`skills ${bgColor}`} id="skills">
         <h1 className="title">{title}</h1>
         <div className="hard-skills-animation-container">
           <ul className="hardSkills">

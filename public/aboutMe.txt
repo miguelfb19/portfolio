@@ -1,0 +1,14 @@
+Soy un desarrollador Full Stack con formación en sistemas y computación, apasionado por el 
+aprendizaje continuo y el desarrollo de soluciones innovadoras. Mi experiencia incluye el 
+diseño, desarrollo y mantenimiento de aplicaciones web utilizando tecnologías modernas del 
+ecosistema JavaScript, como React, Nextjs, Angular, Vue.js, Bootstrap, Tailwind, Node.js, 
+MongoDB y Prisma, entre otras.
+
+He trabajado en proyectos que abarcan desde el diseño de interfaces de 
+usuario intuitivas hasta la implementación de arquitecturas back-end sencillas, integrando 
+herramientas como Postman y Git/GitHub para optimizar el flujo de trabajo. Además, 
+cuento con experiencia en bases de datos.
+
+Me defino como una persona proactiva y orientada a resultados, capaz de enfrentar retos con determinación y 
+creatividad. Estoy constantemente perfeccionando mis habilidades y explorando nuevas tecnologías para mantenerme a la 
+vanguardia del desarrollo web. Mi objetivo es contribuir al éxito de proyectos desafiantes.

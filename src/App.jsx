@@ -1,25 +1,29 @@
+// ________________________________
+// SECTIONS
+// ________________________________
+
+import {Header, AboutMe, Contact, Projects, Skills, Education} from "./components/sections";
+
+// ________________________________
+// COMPONENTS
+// ________________________________
+
 import "./assets/css/styles.css";
 import Menu from "./components/Menu";
-import Header from "./components/Header";
-import Skills from "./components/Skills";
-import AboutMe from "./components/AboutMe";
-import Projects from "./components/Projects";
-import Education from "./components/Education";
 import Icons from "./components/Icons";
-import Contact from "./components/Contact";
 import ButtonToTop from "./components/ButtonToTop";
 
 function App() {
   return (
     <>
       <ButtonToTop></ButtonToTop>
-      <Menu></Menu>
-      <Header></Header>
-      <Skills></Skills>
-      <AboutMe></AboutMe>
-      <Projects></Projects>
-      <Education></Education>
-      <Contact>x</Contact>
+      <Menu />
+      <Header />
+      <AboutMe bgColor="bg-blue-1"/>
+      <Projects />
+      <Skills bgColor="bg-blue-1"/>
+      <Education />
+      <Contact bgColor="bg-blue-1"/>
       <footer>
         <span className="copyright">
           &copy; Todos los derechos reservados

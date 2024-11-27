@@ -1,7 +1,7 @@
-import Icons from "./Icons";
-import picture from "../assets/imagenes/fotos/portada.jpg";
-import "../assets/css/styles.css";
-import presentationLetter from "../assets/imagenes/certificados/cartaPresentacion.pdf";
+import Icons from "../Icons";
+import picture from "../../assets/imagenes/fotos/portada.jpg";
+import "../../assets/css/styles.css";
+import presentationLetter from "../../assets/imagenes/certificados/cartaPresentacion.pdf";
 import {Link} from "react-scroll";
 
 function Header() {
@@ -11,8 +11,8 @@ function Header() {
         <section className="initialInfo">
           <h2 className="title">Miguel Ángel Fernández Barco</h2>
           <h3>
-            Desarrollador FrontEnd <br />
-            (FrontEnd Developer)
+            Desarrollador FullStack <br />
+            (FullStack Developer)
           </h3>
           <div id="redes">
             <a

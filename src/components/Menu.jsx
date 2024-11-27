@@ -4,6 +4,14 @@ import { Squash as Hamburger } from "hamburger-react";
 import { useState, useEffect } from "react";
 
 function Menu() {
+  const menuItems = [
+    { name: "Sobre mí", link: "aboutMe" },
+    { name: "Proyectos", link: "portfolio" },
+    { name: "Habilidades", link: "skills" },
+    { name: "Formación", link: "education" },
+    { name: "Contacto", link: "contact" },
+  ];
+
   //Creamos esta variable para corregir el scroll que se modifica debido a la animacion del DOM
   let vh = window.innerHeight;
   let vw = window.innerWidth;
@@ -38,51 +46,18 @@ function Menu() {
         )}
         {isOpen && (
           <section className="menuRight">
-            <Link
+            {menuItems.map((item, index) => (
+              <Link
+              key={index+item.name}
               style={{ cursor: "pointer" }}
-              to="skills"
+              to={item.link}
               smooth={true}
               offset={srollCorrection}
               duration={800}
             >
-              Habilidades
+              {item.name}
             </Link>
-            <Link
-              style={{ cursor: "pointer" }}
-              to="aboutMe"
-              smooth={true}
-              offset={srollCorrection}
-              duration={800}
-            >
-              Sobre mí
-            </Link>
-            <Link
-              style={{ cursor: "pointer" }}
-              to="portfolio"
-              smooth={true}
-              offset={srollCorrection}
-              duration={800}
-            >
-              Proyectos
-            </Link>
-            <Link
-              style={{ cursor: "pointer" }}
-              to="education"
-              smooth={true}
-              offset={srollCorrection}
-              duration={800}
-            >
-              Formación
-            </Link>
-            <Link
-              style={{ cursor: "pointer" }}
-              to="contact"
-              smooth={true}
-              offset={srollCorrection}
-              duration={800}
-            >
-              Contacto
-            </Link>
+            ))}
           </section>
         )}
       </nav>
