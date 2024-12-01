@@ -11,8 +11,8 @@ function Header() {
         <section className="initialInfo">
           <h2 className="title">Miguel Ángel Fernández Barco</h2>
           <h3>
-            Desarrollador FullStack <br />
-            (FullStack Developer)
+            Desarrollador Frontend <br />
+            (Frontend Developer)
           </h3>
           <div id="redes">
             <a

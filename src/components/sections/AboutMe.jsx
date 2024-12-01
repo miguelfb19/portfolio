@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import presentationLetter from "../../assets/imagenes/certificados/cartaPresentacion.pdf";
 
 function AboutMe({ bgColor = "" }) {
   const [text, setText] = useState("");
@@ -14,8 +13,6 @@ function AboutMe({ bgColor = "" }) {
       });
   }, []);
 
-  // console.log(text.split('/\r?\n/'));
-
   return (
     <div className={bgColor}>
       <section className="aboutMe" id="aboutMe">
@@ -23,14 +20,6 @@ function AboutMe({ bgColor = "" }) {
         {text.split("\n\n").map((line, index) => (
           <p key={index}>{line}</p>
         ))}
-        <a
-          className="btn2"
-          href={presentationLetter}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Presentación
-        </a>
       </section>
     </div>
   );

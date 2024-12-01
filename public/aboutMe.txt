@@ -1,4 +1,4 @@
-Soy un desarrollador Full Stack con formación en sistemas y computación, apasionado por el 
+Soy un desarrollador Frontend con formación en sistemas y computación, apasionado por el 
 aprendizaje continuo y el desarrollo de soluciones innovadoras. Mi experiencia incluye el 
 diseño, desarrollo y mantenimiento de aplicaciones web utilizando tecnologías modernas del 
 ecosistema JavaScript, como React, Nextjs, Angular, Vue.js, Bootstrap, Tailwind, Node.js, 
