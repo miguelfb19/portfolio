@@ -39,7 +39,6 @@ import gitCert from "../assets/imagenes/certificados/git_github_profesional.jpg"
 // IMAGENES
 // ________________________________________________________
 
-import picCRUD from "../assets/imagenes/projectCRUD.png";
 import picBlogVue from "../assets/imagenes/projectVue.png";
 import picBlogReact from "../assets/imagenes/projectReact.png";
 import picBlogAngular from "../assets/imagenes/projectAngular.png";
@@ -80,14 +79,6 @@ export const projects = [
     tools: ["nextjs", "tailwind", "mongodb", "prisma"],
     link: "https://menualamano.vercel.app",
     repository: "https://github.com/miguelfb19/menu-a-la-mano",
-  },
-  {
-    img: picCRUD,
-    title: "CRUD",
-    content: "Crear, leer, actualizar, eliminar usuarios usando localStorage",
-    tools: ["vue"],
-    link: "https://vuecrud-nine.vercel.app",
-    repository: "https://github.com/miguelfb19/vuecrud",
   },
   {
     img: picBlogVue,
