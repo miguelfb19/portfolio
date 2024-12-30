@@ -6,6 +6,7 @@
   --blue1: #1b263b;
   --blue3: #415a77;
   --blue4: #778da9;
+  --dark: #1a1e26;
   --colorGreen: #23c483;
   --textColor: #e0e1dd;
   --mont: "Montserrat", sans-serif;
@@ -13,7 +14,6 @@
   --scrollAnimationCarrousel: -80%;
   /* agregar para cada icono un -10% */
   --scrollAnimationTime: 10s;
-  
 }
 
 /* ==================================================================== */
@@ -33,7 +33,7 @@
   scroll-margin-top: 50vh;
 }
 
-.bg-blue-1{
+.bg-blue-1 {
   background-color: var(--blue1);
 }
 
@@ -52,7 +52,8 @@ body {
   font-family: var(--mont);
   margin: 0 auto;
   padding: 0;
-  background-color: #1a1e26;
+  background-color: var(--dark);
+  scrollbar-color: var(--blue3) var(--blue1);
 }
 
 .title {
@@ -174,19 +175,16 @@ h2 {
   background-color: var(--blue1);
   display: flex;
   align-items: center;
-  width: 100vw;
+  justify-content: space-between;
+  width: 100%;
   height: 10vh;
-}
-
-.spanMenu {
-  flex: 1;
 }
 
 .menuRight {
   display: flex;
   gap: 2em;
   justify-content: center;
-  padding-right: 3em;
+  margin-right: 3em;
 }
 
 .menuLeft {
@@ -581,6 +579,7 @@ h2 {
   line-height: 2em;
   max-height: 35vh;
   overflow-y: scroll;
+  scrollbar-color: var(--blue3) var(--dark);
 }
 
 .exp {
@@ -673,27 +672,27 @@ details a:visited {
   outline-offset: -5px;
 }
 
-.containerForm{
+.containerForm {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
 }
 
-.loadingSpinner{
+.loadingSpinner {
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   height: 100%;
   color: white;
-  animation: spin .7s linear infinite;
+  animation: spin 0.7s linear infinite;
 }
 
-.loadingText{
+.loadingText {
   color: white;
 }
 
-.loadingContainer{
+.loadingContainer {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -702,9 +701,9 @@ details a:visited {
 
 @keyframes spin {
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-} 
+}
 
 /* ==================================================================== */
 /* FOOTER */
@@ -760,7 +759,7 @@ footer {
     font-size: 1.1em;
     padding: 1.2em;
   }
-  
+
   .mainMenu a {
     font-size: 1.5em;
   }
@@ -887,15 +886,14 @@ footer {
     }
   }
 
-  .mainMenu{
+  .mainMenu {
     height: 7vh;
     position: sticky;
     top: 0;
     z-index: 1;
   }
 
-  .menuRight{
-    
+  .menuRight {
     flex-direction: column;
     justify-content: flex-start;
     gap: 4em;
@@ -908,21 +906,21 @@ footer {
     letter-spacing: 1px;
     z-index: 1;
     height: 100%;
-    animation: collapseMenu .3s linear both;
+    animation: collapseMenu 0.3s linear both;
   }
 
   @keyframes collapseMenu {
-    0%{
+    0% {
       max-height: 0;
-      opacity: .3;
+      opacity: 0.3;
     }
-    100%{
+    100% {
       max-height: 100%;
       opacity: 1;
     }
   }
 
-  .btnTop{
+  .btnTop {
     z-index: 2;
   }
 
@@ -930,7 +928,7 @@ footer {
     margin-left: 1em;
   }
 
-  .hamburger{
+  .hamburger {
     padding-right: 2em;
   }
 

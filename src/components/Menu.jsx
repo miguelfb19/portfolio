@@ -31,7 +31,6 @@ function Menu() {
         <section className="menuLeft">
           <Icons iconName="code"></Icons>
         </section>
-        <span className="spanMenu"></span>
         {vw <= 820 && (
           <div className="hamburger">
             <Hamburger
@@ -45,6 +44,7 @@ function Menu() {
           </div>
         )}
         {isOpen && (
+          
           <section className="menuRight">
             {menuItems.map((item, index) => (
               <Link
