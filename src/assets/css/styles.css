@@ -896,9 +896,12 @@ footer {
   .menuRight {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: end;
     gap: 4em;
     position: fixed;
     right: 0;
+    margin-right: 0;
+    left: 0;
     top: 7vh;
     backdrop-filter: blur(50px);
     padding: 3em;

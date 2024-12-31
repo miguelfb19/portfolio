@@ -45,7 +45,7 @@ function Menu() {
         )}
         {isOpen && (
           
-          <section className="menuRight">
+          <section onClick={()=>setOpen(!isOpen)} className="menuRight">
             {menuItems.map((item, index) => (
               <Link
               key={index+item.name}
@@ -54,6 +54,7 @@ function Menu() {
               smooth={true}
               offset={srollCorrection}
               duration={800}
+              onClick={()=>setOpen(!isOpen)}
             >
               {item.name}
             </Link>
